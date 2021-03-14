@@ -1,0 +1,104 @@
+const content = $(".content");
+const bestBlock = content.find(".best-block");
+
+const whatWeDo = $(".what-we-do");
+const wwdBlock = whatWeDo.find(".wwd-block");
+
+const addBlueBcg = (event) => {
+    const currentGrayElem = $(event.currentTarget);
+    currentGrayElem.find(".dark-icon").addClass("blue-bcg");
+}
+const removeBlueBcg = (event) => {
+    const currentBlueElem = $(event.currentTarget);
+    currentBlueElem.find(".dark-icon").removeClass("blue-bcg");
+}
+
+$(bestBlock).mouseenter(addBlueBcg);
+$(bestBlock).mouseleave(removeBlueBcg);
+
+$(wwdBlock).mouseenter(addBlueBcg);
+$(wwdBlock).mouseleave(removeBlueBcg);
+        /* E N D     O F     C O N T E N T     &     W H A T     W E     D O     -     S T Y L E */
+
+const reasonContainer = $(".reason-container");
+const reasonItems = reasonContainer.find(".reason-items");
+
+const addBlueItem = (event) => {
+    const currentDarkElem = $(event.currentTarget); 
+    currentDarkElem.find(".fa").addClass("blue-item");
+}
+const removeBlueItem = (event) => {
+    const currentLightElem = $(event.currentTarget);
+    currentLightElem.find(".fa").removeClass("blue-item");
+}
+
+$(reasonItems).mouseenter(addBlueItem);
+$(reasonItems).mouseleave(removeBlueItem);
+        /* E N D     O F     R E A S O N - C O N T A I N E R     -     S T Y L E */
+
+const meetOurTeam = $(".meet-our-team");
+const motBlock = meetOurTeam.find(".mot-block");
+
+const addBlueTitle = (event) => {
+    const currentGrayTitle = $(event.currentTarget);
+    currentGrayTitle.find("h3").addClass("blue-item")
+}
+const removeBlueTitle = (event) => {
+    const currentBlueTitle = $(event.currentTarget);
+    currentBlueTitle.find("h3").removeClass("blue-item")
+}
+
+$(motBlock).mouseenter(addBlueTitle)
+$(motBlock).mouseleave(removeBlueTitle)
+        /* E N D     O F     M E E T     O U R     T E E M     -     S T Y L E */
+
+const fromOurBlog = $(".from-our-blog");
+const itemWrapper = fromOurBlog.find(".item-wrapper");
+
+const addBlueText = (event) => {
+    const currentGrayText = $(event.currentTarget);
+    currentGrayText.find(".rm").addClass("blue-item");
+}
+const removeBlueText = (event) => {
+    const currentBlueText = $(event.currentTarget);
+    currentBlueText.find(".rm").removeClass("blue-item");
+}
+
+$(itemWrapper).mouseenter(addBlueText)
+$(itemWrapper).mouseleave(removeBlueText)
+        /* E N D     O F     F R O M     O U R     B L O G     -     S T Y L E */
+
+const ourPricing = $(".our-pricing");
+const pricingItems = ourPricing.find(".pricing-items");
+
+const addBlueTextBlueBcg = (event) => {
+    const currentPricingBlock = $(event.currentTarget);
+    currentPricingBlock.find(".pr-header").addClass("blue-item");
+    currentPricingBlock.find(".pr-footer").addClass("light-item blue-bcg");
+}
+const removeBlueTextBlueBcg = (event) => {
+    const currentPricingBlock = $(event.currentTarget);
+    currentPricingBlock.find(".pr-header").removeClass("blue-item");
+    currentPricingBlock.find(".pr-footer").removeClass("light-item blue-bcg");
+}
+
+$(pricingItems).mouseenter(addBlueTextBlueBcg)
+$(pricingItems).mouseleave(removeBlueTextBlueBcg)
+        /* E N D     O F     O U R     P R I C I N G     -     S T Y L E */
+
+const ourPartners = $(".our-partners");
+const oprtnrItem = ourPartners.find(".oprtnr-item");
+const oprtnrImg = oprtnrItem.find("img");
+
+const addBlueHighlight = (event) => {
+    const currentOPrtnrImg = $(event.currentTarget);
+    currentOPrtnrImg.addClass("highlight");
+}
+const removeBlueHighlight = (event) => {
+    const currentOPrtnrImg = $(event.currentTarget);
+    currentOPrtnrImg.removeClass("highlight");
+}
+
+$(oprtnrImg).mouseenter(addBlueHighlight)
+$(oprtnrImg).mouseleave(removeBlueHighlight)
+        /* E N D     O F     O U R     P A R T N E R S     -     S T Y L E */

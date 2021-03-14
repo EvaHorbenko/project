@@ -1,0 +1,39 @@
+        /* ----     ---- C O N T A I N E R     W R A P P E R ----     ----  */
+const containerWrapper = $(".container-wrapper");
+const headerImg = containerWrapper.find(".header-img");
+
+let currentHeaderImgSrs = headerImg.attr("src");
+let nextHIS = 0;
+let headerImgSrcNum = 1;
+
+const changeHeaderImg = () => {
+    if (headerImgSrcNum < 8) {
+        nextHIS = currentHeaderImgSrs.replace(`${+ currentHeaderImgSrs.slice(currentHeaderImgSrs.length - 5, currentHeaderImgSrs.length - 4)}`, `${headerImgSrcNum}`);
+        headerImg.attr("src", nextHIS);
+        headerImgSrcNum += 1;
+    } else {
+        headerImgSrcNum = 1;
+        nextHIS = currentHeaderImgSrs.replace(`${+ currentHeaderImgSrs.slice(currentHeaderImgSrs.length - 5, currentHeaderImgSrs.length - 4)}`, `${headerImgSrcNum}`);
+        headerImg.attr("src", nextHIS);
+        headerImgSrcNum += 1;
+    }
+}
+
+let timeInterval = setInterval(changeHeaderImg, 3000);
+
+        /* ----     ---- O U R     P O R T F O L I O ----     ----  */
+const ourPortfolio = $(".our-portfolio");
+const OPCathegoty = ourPortfolio.find(".cathegoty-item");
+const OPItem = ourPortfolio.find(".item");
+const OPItemClass = OPItem.attr("class").slice(5);
+console.log(OPItemClass);
+
+const OPFilter = (event) => {
+    const currentFilterBtn = $(event.currentTarget);
+    const currentFilterBtnId = currentFilterBtn.attr("id");
+    const currentElemId = currentFilterBtnId.slice(3);
+    // console.log(currentElemId);
+
+}
+
+OPCathegoty.click(OPFilter);
