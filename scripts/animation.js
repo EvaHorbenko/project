@@ -1,3 +1,8 @@
+        /* M E N U     I T E M - W R A P P E R */
+/* const menuSign = $("#menu").find("i");
+const menuItems = $("#menu").find(".nav-wrapper");
+console.log(menuItems)
+ */
         /* ----     ---- C O N T A I N E R     W R A P P E R ----     ----  */
 const containerWrapper = $(".container-wrapper");
 const headerImg = containerWrapper.find(".header-img");
